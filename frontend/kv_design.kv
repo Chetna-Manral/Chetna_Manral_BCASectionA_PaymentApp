@@ -1,0 +1,33 @@
+#:kivy 2.3.0
+
+<MainInterface>:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    Label:
+        text: "Scan Barcode"
+        font_size: 24
+
+    Button:
+        text: "Start Scanner"
+        on_press: root.scan_barcode()
+
+    Label:
+        id: product_name
+        text: "Product Name"
+        font_size: 20
+
+    Label:
+        id: product_price
+        text: "Price"
+        font_size: 20
+
+    Button:
+        text: "Pay Now"
+        on_press: root.make_payment()
+
+    Label:
+        id: status
+        text: ""
+        font_size: 16
